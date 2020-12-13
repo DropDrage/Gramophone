@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Gramophone</string>
+    <string name="only_letters" translatable="false">АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="title_search">Поиск</string>
+    <string name="title_messages">Сообщения</string>
+    <string name="title_home">Home</string>
+
+    <string name="message">Сообщение</string>
+
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <!--Authorization-->
+    <string name="auth_your_email">Ваш Email</string>
+    <string name="auth_password">Пароль</string>
+    <string name="login_sign_in">Войти</string>
+    <string name="login_sign_up">Зарегистрироваться</string>
+    <string name="login_failed">Login failed</string>
+    <string name="validation_email">Введите корректный Email</string>
+    <string name="validation_password">Пароль должен содержать не менее 6 символов</string>
+
+    <!--Sign Up-->
+    <string name="sign_up_email_enter">Укажите почту</string>
+    <string name="sign_up_email_purposes">Ваша почта будет использоваться для авторизации</string>
+    <string name="sign_up_email_get_code">Получить код</string>
+    <string name="sign_up_email_sign_agreement">Нажимая на кнопку «Получить код», Вы принимаете пользовательское соглашение и политику конфедециальности сервиса.</string>
+
+    <string name="sign_up_code_enter">Введите код</string>
+    <string name="sign_up_code_check_email">Вам на почту должен был прийти код подтверждения</string>
+    <string name="sign_up_code_resend">Отправить код ещё раз</string>
+    <string name="sign_up_code_check_spam">Если Вам не пришёл код подтверждения, попробуйте проверить папку Спам.</string>
+
+    <string name="sign_up_info_enter">Заполните необходимую информацию</string>
+    <string name="sign_up_info_first_name">Имя</string>
+    <string name="sign_up_info_last_name">Фамилия</string>
+    <string name="sign_up_info_password">Пароль</string>
+    <string name="sign_up_info_continue">Продолжить</string>
+
+    <string name="sign_up_complete_congrats">
+        Поздравляем!<br />
+        Теперь у Вас есть аккаунт<br /><br />
+        Всё что Вам осталось, так это<br />
+        заполнить страницу своего<br />
+        профиля</string>
+    <string name="sign_up_complete_edit_profile">Редактировать профиль</string>
+    <string name="sign_up_complete_not_now">Не сейчас</string>
+
+
+    <string name="search_input">Поиск в Граммофоне</string>
+    <string name="search_instruments">Инструменты</string>
+    <string name="search_profile">Профиль</string>
+
+    <string name="search_instruments_name">Название инструмента</string>
+    <string name="search_genre_name">Название жанра</string>
+    <string name="search_instrument_skill">Навык игры: </string>
+
+    <string name="search_country">Страна</string>
+    <string name="search_city">Город</string>
+    <string name="search_metro">Ближайшее метро</string>
+    <string name="search_gender">Пол</string>
+    <string name="search_age">Возраст</string>
+    <string name="search_age_from">От</string>
+    <string name="search_age_to">До</string>
+
+    <string name="search_gender_male">Мужской</string>
+    <string name="search_gender_female">Женский</string>
+    <string name="search_gender_any">Любой</string>
+
+    <string name="welcome">"Welcome !"</string>
+
+    <string-array name="test">
+        <item name="a">a1</item>
+        <item name="b">b1</item>
+        <item name="c">c1</item>
+        <item name="d">d1</item>
+    </string-array>
+
+    <!--Instruments-->
+    <string name="instrument_type_guitar">Гитара</string>
+    <string name="instrument_type_piano">Пианино</string>
+    <string name="instrument_type_vocal">Вокал</string>
+    <string name="instrument_type_bass">Басс</string>
+    <string name="instrument_type_cello">Виолончель</string>
+    <string name="instrument_type_drums">Барабаны</string>
+    <string name="instrument_type_flute">Флейта</string>
+    <string name="instrument_type_saxophone">Саксофон</string>
+
+    <!--Genres-->
+    <string name="music_genre_rock">Рок</string>
+    <string name="music_genre_blues">Блюз</string>
+    <string name="music_genre_jazz">Джаз</string>
+    <string name="music_genre_metal">Метал</string>
+    <string name="music_genre_classical">Классика</string>
+    <string name="music_genre_rap">Рэп</string>
+    <string name="music_genre_folk">Фолк</string>
+
+</resources>

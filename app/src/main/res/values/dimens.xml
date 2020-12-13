@@ -1,0 +1,74 @@
+<resources>
+
+    <!--Margin-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="margin_default_none">0dp</dimen>
+    <dimen name="margin_default_half">4dp</dimen>
+    <dimen name="margin_default">8dp</dimen>
+    <dimen name="margin_default_medium_half">12dp</dimen>
+    <dimen name="margin_default_medium">16dp</dimen>
+    <dimen name="margin_default_large_half">24dp</dimen>
+    <dimen name="margin_default_large">32dp</dimen>
+    <dimen name="margin_default_xlarge">48dp</dimen>
+    <dimen name="margin_default_xxlarge">64dp</dimen>
+    <dimen name="margin_email_input">160dp</dimen>
+    <dimen name="margin_edit_button">136dp</dimen>
+
+    <!--Padding-->
+    <dimen name="padding_count_text">6dp</dimen>
+    <dimen name="padding_default">8dp</dimen>
+    <dimen name="padding_default_medium">16dp</dimen>
+    <dimen name="padding_default_large_half">24dp</dimen>
+    <dimen name="padding_default_large">32dp</dimen>
+    <dimen name="padding_default_xlarge">48dp</dimen>
+    <dimen name="padding_default_xxlarge">64dp</dimen>
+
+    <!--TextSize-->
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_xsmall">12sp</dimen>
+
+    <!--Elevation-->
+    <dimen name="elevation_bottom_nav">16dp</dimen>
+    <dimen name="elevation_toolbar">8dp</dimen>
+
+    <!--Corners-->
+    <dimen name="corners_dropdown">7dp</dimen>
+    <dimen name="corners_count">12dp</dimen>
+    <dimen name="corners_search">14dp</dimen>
+    <dimen name="corners_message">16dp</dimen>
+    <dimen name="corners_button">20dp</dimen>
+
+    <!--Size-->
+    <dimen name="avatar_list_size">64dp</dimen>
+    <dimen name="avatar_results_size">56dp</dimen>
+    <dimen name="avatar_toolbar_size">32dp</dimen>
+    <dimen name="mute_list_size">16dp</dimen>
+    <dimen name="message_input_max_height">300dp</dimen>
+    <dimen name="search_input_height">32dp</dimen>
+    <dimen name="search_tab_layout_height">48dp</dimen>
+    <dimen name="button_width">304dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="dropdown_height">48dp</dimen>
+    <dimen name="dropdown_small_height">32dp</dimen>
+
+    <dimen name="default_stroke_width">1dp</dimen>
+
+
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>

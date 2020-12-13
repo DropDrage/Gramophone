@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.wholedetail.gramophone.ui.search.filter.SearchFilterViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_default_medium">
+
+        <com.wholedetail.gramophone.view.LabeledDropdown
+            android:id="@+id/instrument"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="@string/search_instruments_name"
+            app:value="@={viewModel.instrumentType}"
+            app:spinnerOptions="@{viewModel.instruments}" />
+
+        <com.wholedetail.gramophone.view.LabeledDropdown
+            android:id="@+id/genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_large_half"
+            android:layout_marginBottom="@dimen/margin_default_medium"
+            app:label="@string/search_genre_name"
+            app:value="@={viewModel.genre}"
+            app:spinnerOptions="@{viewModel.genres}" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/Divider"
+            android:layout_marginBottom="@dimen/margin_default_medium" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/instrumentSkillBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/SecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/search_instrument_skill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/instrumentLabel"
+                style="@style/PrimaryTextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Басс гитара" />
+
+            <RatingBar
+                android:id="@+id/instrumentSkill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                android:stepSize="1"
+                android:rating="@={viewModel.instrumentSkill}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/Dropdown"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dropdown_small_height"
+                android:layout_marginStart="@dimen/margin_default_xlarge"
+                android:entries="@array/test"
+                app:layout_constraintBottom_toBottomOf="@+id/instrumentSkill"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/instrumentSkill"
+                app:layout_constraintTop_toTopOf="@+id/instrumentSkill" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

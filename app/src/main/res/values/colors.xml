@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pink">#FF0281</color>
+    <color name="pink_light">#FF99AE</color>
+    <color name="pink_message">#FFCCCF</color>
+    <color name="pink_message_selected">#FF999B</color>
+
+    <color name="black">#000000</color>
+    <color name="gray">#191919</color>
+    <color name="gray_light">#757575</color>
+    <color name="gray_lighter">#BABABA</color>
+    <color name="gray_inactive">#E7E7E7</color>
+    <color name="gray_background_on_white">#F2F2F2</color>
+    <color name="gray_message_selected">#D3D3D3</color>
+
+    <color name="white">#FFFFFF</color>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.wholedetail.gramophone.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.wholedetail.gramophone.ui.chats_list.ChatsListFragment"
+        android:label="@string/title_messages"
+        tools:layout="@layout/fragment_chats_list">
+        <action
+            android:id="@+id/action_navigation_messages_to_chatActivity"
+            app:destination="@id/chatActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.wholedetail.gramophone.ui.search.filter.SearchFilterFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search_filter">
+        <action
+            android:id="@+id/action_navigation_search_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/chatActivity"
+        android:name="com.wholedetail.gramophone.ui.activity.ChatActivity"
+        android:label="activity_chat"
+        tools:layout="@layout/activity_base">
+        <argument
+            android:name="chat"
+            app:argType="com.wholedetail.gramophone.data.model.Chat" />
+    </activity>
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.wholedetail.gramophone.ui.search.results.SearchResultsFragment"
+        android:label="fragment_search_results_"
+        tools:layout="@layout/fragment_search_results_">
+        <argument
+            android:name="searchData"
+            app:argType="com.wholedetail.gramophone.data.model.SearchData" />
+    </fragment>
+</navigation>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listItem"
+            type="com.wholedetail.gramophone.data.model.Chat" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/avatar_list_size"
+            android:layout_height="@dimen/avatar_list_size"
+            android:layout_marginTop="@dimen/margin_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcUrl="@{listItem.lastMessage.sender.avatarUrl}"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/chatName"
+            style="@style/PrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_medium"
+            android:layout_marginTop="@dimen/margin_default_medium_half"
+            android:text="@{listItem.chatName}"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView"
+            tools:text="Название чата" />
+
+        <TextView
+            android:id="@+id/senderName"
+            style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{listItem.lastMessage.sender.firstName + ": "}'
+            android:textColor="@color/gray_lighter"
+            app:layout_constraintStart_toStartOf="@+id/chatName"
+            app:layout_constraintTop_toBottomOf="@+id/chatName"
+            tools:text="Отправитель: " />
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_default_xlarge"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@{listItem.lastMessage.text}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/senderName"
+            app:layout_constraintTop_toBottomOf="@+id/chatName"
+            tools:text="Текст сообщения, доходящий впло..." />
+
+        <TextView
+            android:id="@+id/unreadCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_rectangle"
+            android:paddingStart="@dimen/padding_count_text"
+            android:paddingEnd="@dimen/padding_count_text"
+            android:text="@{listItem.unreadCountFormatted}"
+            android:textColor="@color/white"
+            app:isVisible='@{listItem.unreadCountFormatted == "0"}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatName"
+            tools:text="100K" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_half"
+            android:fontFamily="sans-serif-light"
+            android:text="@{listItem.timeFormatted}"
+            android:textColor="@color/gray_lighter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message"
+            tools:text="35М" />
+
+        <ImageView
+            android:id="@+id/onlineDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            app:isVisible="@{listItem.lastMessage.sender.online}"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+            app:layout_constraintEnd_toEndOf="@+id/circleImageView"
+            app:srcCompat="@drawable/ic_online_dot" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/mute_list_size"
+            android:layout_height="@dimen/mute_list_size"
+            android:layout_marginStart="@dimen/margin_default_half"
+            android:tint="@color/gray_light"
+            app:isVisible="@{!listItem.notificationEnabled}"
+            app:layout_constraintBottom_toTopOf="@+id/senderName"
+            app:layout_constraintStart_toEndOf="@+id/chatName"
+            app:layout_constraintTop_toTopOf="@+id/chatName"
+            app:srcCompat="@drawable/ic_mute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="PrimaryText" parent="Title">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="PrimaryTextSmall" parent="Title">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="SecondaryText">
+        <item name="android:textColor">@color/gray_light</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="SecondaryLightText" parent="SecondaryText">
+        <item name="android:textColor">@color/gray_lighter</item>
+    </style>
+
+    <style name="SubtitleText">
+        <item name="android:textColor">@color/gray_light</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/text_size_xsmall</item>
+    </style>
+
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_inactive</item>
+    </style>
+
+
+    <style name="TransparentEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SearchEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/shape_rounded_search_input</item>
+        <item name="android:layout_height">@dimen/search_input_height</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+    </style>
+
+    <style name="PrimaryButton" parent="AppButton">
+        <item name="android:background">@drawable/background_rounded_button_primary</item>
+        <item name="android:textColor">@color/color_text_primary_button</item>
+    </style>
+
+    <style name="PrimaryOutlinedButton" parent="AppButton">
+        <item name="android:background">@drawable/background_rounded_button_outlined_primary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="Dropdown" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:layout_height">@dimen/dropdown_height</item>
+        <item name="android:background">@drawable/background_dropdown</item>
+        <item name="android:dropDownSelector">@drawable/ic_dropdown_arrow</item>
+    </style>
+
+</resources>
