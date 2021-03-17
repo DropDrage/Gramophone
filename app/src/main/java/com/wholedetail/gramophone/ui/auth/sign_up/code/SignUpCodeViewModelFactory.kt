@@ -8,7 +8,6 @@ class SignUpCodeViewModelFactory @Inject constructor(
     private val accountRepository: AccountRepository
 ) : BaseViewModelFactory<SignUpCodeViewModel>(SignUpCodeViewModel::class.java) {
 
-    override fun createViewModel() =
-        SignUpCodeViewModel(accountRepository)
+    override fun createViewModel() = SignUpCodeViewModel(accountRepository)
 
 }

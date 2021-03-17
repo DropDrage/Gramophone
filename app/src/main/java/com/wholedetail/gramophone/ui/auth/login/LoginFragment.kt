@@ -63,7 +63,7 @@ class LoginFragment : Fragment() {
                     showLoginFailed(loginResult.error)
                 } else if (loginResult.success != null) {
                     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainActivity())
-                    activity!!.finish()
+                    requireActivity().finish()
                 }
             })
         }
